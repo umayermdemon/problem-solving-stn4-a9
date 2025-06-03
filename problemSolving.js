@@ -32,10 +32,22 @@ const persons = [
 const malePersonsName = persons
   .filter((data) => data.gender != "female")
   .map((malePerson) => malePerson.name);
-console.log(malePersonsName);
 
 // 2.Task: Object Manipulation
 // -Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
+
+const books = [
+  { title: "Title 1", author: "Author 1", year: "2012" },
+  { title: "Title 2", author: "Author 2", year: "2013" },
+  { title: "Title 3", author: "Author 3", year: "2014" },
+];
+
+const getBookTitles = (data) => {
+  return data.map((book) => ({ title: book.title }));
+};
+
+const titles = getBookTitles(books);
+console.log(titles);
 
 // 3.Task: Function Composition
 // -Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
