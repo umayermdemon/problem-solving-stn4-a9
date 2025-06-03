@@ -95,6 +95,17 @@ console.log(sort);
 // 5.Task: Find and Modify
 // -Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
 
+const searchByName = (personsArray, name, newAge) => {
+  const person = personsArray.find((p) => p.name === name);
+  if (person) {
+    person.age = newAge;
+  }
+  return person;
+};
+
+const foundPerson = searchByName(persons, "Usama", 3);
+console.log(foundPerson);
+
 // 6.Task: Array Reduction
 // -Create an array of numbers. Write a function that uses the reduce method to calculate the sum of all even numbers in the array.
 
