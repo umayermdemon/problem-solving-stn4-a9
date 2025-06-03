@@ -29,11 +29,14 @@ const persons = [
   },
 ];
 
-const malePersonsName = persons
-  .filter((data) => data.gender != "female")
-  .map((malePerson) => malePerson.name);
+const getMaleName = (persons) => {
+  return persons
+    .filter((data) => data.gender != "female")
+    .map((malePerson) => malePerson.name);
+};
 
-console.log(malePersonsName);
+const maleName = getMaleName(persons);
+console.log(maleName);
 
 // 2.Task: Object Manipulation
 // -Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
@@ -67,6 +70,28 @@ console.log(result);
 // 4.Task: Sorting Objects
 // -Create an array of objects representing cars with properties like make, model, and year. Write a function to sort the array of cars by the year of manufacture in ascending order. Print the sorted array.
 
+const cars = [
+  {
+    make: "bike 3",
+    model: "Model 3",
+    year: 1995,
+  },
+  {
+    make: "bike 1",
+    model: "Model 1",
+    year: 1990,
+  },
+  {
+    make: "bike 2",
+    model: "Model 1",
+    year: 1992,
+  },
+];
+const sortCarsByYearAsc = (carsArray) => {
+  return carsArray.slice().sort((a, b) => a.year - b.year);
+};
+const sort = sortCarsByYearAsc(cars);
+console.log(sort);
 // 5.Task: Find and Modify
 // -Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
 
