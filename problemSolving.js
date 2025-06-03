@@ -121,6 +121,17 @@ console.log(sumOfArray);
 // -Write a function that determines whether a given year is a leap year.
 // Example: Happy New Year
 
+const checkLeapYear = (year) => {
+  const leapYear = (year % 400 === 0 && year % 100 != 0) || year % 4 === 0;
+  if (leapYear) {
+    return "This is leap year";
+  }
+  return "This is not leap year";
+};
+
+const leapYear = checkLeapYear(2002);
+console.log(leapYear);
+
 // 8. Task: Unique Values
 // -Create an array of numbers with some duplicate values. Write a function to filter out the duplicate values and return a new array with only unique numbers. Print the result.
 
