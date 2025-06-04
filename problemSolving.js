@@ -86,9 +86,14 @@ const cars = [
     model: "Model 1",
     year: 1992,
   },
+  {
+    make: "bike 2",
+    model: "Model 1",
+    year: 1989,
+  },
 ];
 const sortCarsByYearAsc = (carsArray) => {
-  return carsArray.slice().sort((a, b) => a.year - b.year);
+  return carsArray.sort((a, b) => a.year - b.year);
 };
 const sort = sortCarsByYearAsc(cars);
 console.log(sort);
